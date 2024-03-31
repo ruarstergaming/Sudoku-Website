@@ -1,0 +1,8 @@
+If the Express server has been ungracefully terminated the socket listening on port 24091 may still be open.
+This stops you starting the server again on the port.
+Use this command to force kill the socket so the server can be started again:
+
+    kill -9 $(lsof -t -i:24091)
+
+or if on Linux this command may prove more useful:
+    fuser -k 24091/tcp

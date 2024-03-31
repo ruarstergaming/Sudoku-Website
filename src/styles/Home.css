@@ -1,0 +1,304 @@
+/**************************Home*****************************/
+
+.home{ 
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.navbar {
+    width: 100vw;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto 30vw auto;
+    justify-content: center;
+    margin-bottom: 200px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#home-middle-grid {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(500px, 0.5fr) );
+    max-width: 1500px;
+    padding-top: 50px;
+    row-gap: 5em;
+    justify-content: center;
+}
+
+.card{ 
+    height: 450px;
+    width: 450px;
+    min-width: 450px;
+    min-height: 450px;
+    max-width: 450px;
+    max-height: 450px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 35px;
+    padding-top: 50px;
+    margin: auto;
+}
+
+.card-image {
+    display: none;
+    margin: 0;
+}
+
+.image{
+    height: 450px;
+    width: 450px;
+    min-width: 450px;
+    min-height: 450px;
+    max-width: 450px;
+    max-height: 450px;
+}
+
+.footer { 
+    position: absolute;
+    background-color: rgb(243, 241, 241);
+    bottom: 0;
+    margin: 0;
+}
+
+
+@media only screen and (max-width: 1666px) {
+    .card-image{
+        display: unset;
+        margin: none;
+    }
+
+    .image {
+        display: none;
+        margin: 0;
+    }
+
+    .card{ 
+        height: 800px;
+        width: 450px;
+        min-width: 450px;
+        min-height: 800px;
+        max-width: 450px;
+        max-height: 800px;
+        text-align: center;
+        vertical-align: middle;
+        font-size: 35px;
+        padding-top: 0px;
+    }
+
+    #home-middle-grid{
+        row-gap: 1em;
+    }
+    
+}
+
+@media only screen and (max-width: 600px) {
+    .card-image{
+        /* display: unset; */
+        width: 80vw;
+        max-width: 450px;
+        margin: auto;
+        display: auto;
+
+    }
+
+    .image {
+        display: none;
+        margin: 0;
+    }
+
+    .card{ 
+        width: 80vw;
+        /* max-width: 300px; */
+        max-height: 550px;
+        min-width: 0px;
+        min-height: unset;
+        /* text-align: center;
+        vertical-align: middle; */
+        font-size: 25px;
+        padding-top: 0px;
+        margin: auto;
+        margin-bottom: 100px;
+        
+    }
+}
+
+@media only screen and (max-width: 286px) {
+    #home-middle-grid {
+        margin-top: 50px;
+    }
+} 
+
+
+@media only screen and (min-width: 2500px){
+    .card-image{
+        display: unset;
+        margin: none;
+    }
+
+    .image {
+        display: none;
+        margin: 0;
+    }
+
+    .card{ 
+        height: 800px;
+        width: 800px;
+        min-width: 800px;
+        min-height: 800px;
+        max-width: 450px;
+        max-height: 800px;
+        text-align: center;
+        vertical-align: middle;
+        padding-top: 0px;
+        font-size: 35px;
+    }
+}
+
+
+/**************************Help****************************/
+
+#help-middle-grid {
+    max-width: 1500px;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+#help-title {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+#helping-hand-image {
+    display: flex;
+    margin: auto;
+    width: 60vw;
+    max-width: 250px;
+    padding-bottom: 10px;
+}
+
+#help-text {
+    margin: auto;
+    max-width: 700px;
+}
+
+#help-line-break {
+    width: 60vw;
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#help-vid {
+    width: 60vw;
+    max-width: 600px;
+    height: 25vw;
+    max-height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/**************************Register****************************/
+
+#register-middle-grid {
+    display: grid;
+    grid-template-columns: repeat(minmax(1000px, 1fr) );
+    max-width: 2000px;
+    padding-top: 50px;
+    row-gap: 2em;
+    justify-content: center;
+    text-align: center;
+}
+
+
+#register-title {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+#register-image {
+    width: 100px;
+    margin: auto;
+    margin-right: 80px;
+}
+
+#register-return-button {
+    width: 150px;
+    margin: auto
+}
+
+/**************************Foreign Login****************************/
+
+#fl-middle-grid {
+    display: grid;
+    grid-template-columns: repeat(minmax(1000px, 1fr) );
+    max-width: 2000px;
+    padding-top: 50px;
+    row-gap: 2em;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+}
+
+
+#fl-title {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+#fl-image {
+    width: 200px;
+    margin: auto;
+    margin-right: 20px;
+}
+
+#fl-return-button {
+    width: 150px;
+    margin: auto;
+    margin-top: -150px
+}
+
+#fl-login-from-text {
+    margin-bottom: 10px;
+}
+
+#fl-outer-container {
+    height: 100vh;
+}
+
+
+/**************************Under development****************************/
+
+#under-development-middle-grid {
+    height: 100vh;
+    max-width: 1500px;
+    padding-top: 20px;
+    justify-content: center;
+}
+
+#under-development-title {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+#under-construction-image {
+    display: flex;
+    margin: auto;
+    width: 50%;
+    height: auto;
+    max-height: 500px;
+    max-width: 500px;
+    min-height: 200px;
+    min-width: 200px;
+
+}
+
+

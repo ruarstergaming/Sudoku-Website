@@ -1,0 +1,10 @@
+Backend Server Port
+    24091 
+
+Frontend Server Port 
+    24092 -> 24021
+
+MongoDB Server Port
+    24093 -> 24031
+
+(cs3099user06 unique port 24091)

@@ -1,0 +1,344 @@
+/*
+Sudoku Style sheet originally taken and adapted from Kenny Yip Coding, 27th Oct, 2022
+https://www.youtube.com/watch?v=S4uRtTb8U-U&t=555s
+*/
+
+.navbar {
+    width: 100vw;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto 30vw auto;
+    justify-content: center;
+    margin-bottom: 200px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: hidden;
+}
+
+#sudoku-middle-grid {
+    display: grid;
+    grid-template-columns: repeat( auto-fit, minmax(450px, 1fr) );
+    max-width: 450px;
+    padding-top: 20px;
+    row-gap: 0.5em;
+    justify-content: center;
+    text-align: center;
+    margin: auto;
+}
+
+#submit {
+    flex: 1;
+}
+
+#showMistakes {
+    width: 350px;
+}
+
+#sudoku-line-break {
+    width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+html, body
+{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+#errors 
+{
+    display: none
+}
+
+
+.board {
+    max-width: 450px;
+    max-height: 450px;
+
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tile {
+    width: 50px; 
+    height: 50px;
+    border: 1px solid lightgray;
+    cursor: pointer;
+
+    /* Text */
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.digits
+{
+    width: 450px;
+    height: 50px;
+    
+    
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+
+.number
+{
+    width: 46px;
+    height: 46px;
+    border: 1px solid black;
+    margin: 2px;
+    cursor: pointer;
+
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.horizontal-line {
+    border-bottom: 1px solid black;
+}
+
+.vertical-line {
+    border-right: 1px solid black;
+}
+
+.number-selected
+{
+    background-color: gray;
+}
+
+.tile-start
+{
+    background-color: whitesmoke;
+}
+
+.button-row
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#remove-button,
+#undo-button,
+#clear-button
+{
+    margin-right: 5px;
+}
+
+#submit-button {
+    margin-top: 10px;
+}
+
+
+#download-puzzle {
+    width: 30vw;
+    margin: auto;
+    max-width:350px
+}
+
+#remove-button
+{
+    text-align: center;
+    vertical-align: center;
+    cursor: pointer;
+    line-height: 38px;
+    border-radius: 10px;
+    border-style: solid;
+    padding-left: 5px;
+    padding-right: 5px;
+    border-width: 1px;
+}
+
+.selected
+{
+    background-color: rgb(164, 230, 250) !important;
+}
+
+.selected-incorrect
+{
+    background-color: rgb(253, 224, 212) !important;
+    color: red;
+}
+
+/* A proxy is a tile that is highlighted from the selected tile but is not the selected tile */
+.proxy
+{
+    background-color: rgb(212, 241, 253) !important;
+}
+
+.tile-start-proxy
+{
+    background-color: rgb(223, 244, 253);
+    color: rgb(0, 128, 187);
+}
+
+.incorrect-active-hint
+{
+    background-color: red !important;
+}
+
+.incorrect
+{
+    background-color: transparent;
+}
+
+.incorrect-proxy
+{
+    background-color: rgb(253, 224, 212) !important;
+}
+
+
+#comment-section {
+    margin-top: 20px;
+}
+
+#submit-comment {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+
+
+/****************************************************Phone size - only valid to 300xJ**************************************************************/
+
+@media only screen and (max-width: 545px) {
+
+    #sudoku-middle-grid {
+        display: grid;
+        grid-template-columns: repeat( auto-fit, minmax(81vw, 1fr) );
+        max-width: 450px;
+        padding-top: 20px;
+        row-gap: 0.5em;
+        justify-content: center;
+        text-align: center;
+        margin: auto;
+    }
+    
+    #submit {
+        flex: 1;
+    }
+    
+    #showMistakes {
+        width: 10px;
+    }
+    
+    #sudoku-line-break {
+        width: 80vw;
+        max-width: 350px;
+    }
+    
+    body
+    {
+        font-family: Arial, Helvetica, sans-serif;
+        text-align: center;
+    }
+    
+    #errors 
+    {
+        display: none
+    }
+    
+    
+    .board {
+        width: 81vw;
+        height: 81vw;
+    
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .tile {
+        width: 9vw; 
+        height: 9vw;
+        border: 1px solid lightgray;
+        cursor: pointer;
+    
+        /* Text */
+        font-size: 4vw;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .digits
+    {
+        width: 90vw;  
+        margin: auto;
+
+    }
+    
+    .number
+    {
+        width: 7vw;
+        height: 7vw;
+        border: 1px solid black;
+        margin: 1vw;
+        cursor: pointer;
+    
+        font-size: 4vw;
+        font-weight: bold;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .horizontal-line {
+        border-bottom: 1px solid black;
+    }
+    
+    .vertical-line {
+        border-right: 1px solid black;
+    }
+    
+    .number-selected
+    {
+        background-color: gray;
+    }
+    
+    .tile-start
+    {
+        background-color: whitesmoke;
+    }
+    
+    /* End reference */
+    
+    
+    .button-row
+    {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    #remove-button,
+    #undo-button,
+    #clear-button
+    {
+        margin-right: 20px;
+    }
+
+}
+
+@media only screen and (max-width: 286px) {
+
+    #puzzle-type {
+        margin-top: 30px;
+    }
+}

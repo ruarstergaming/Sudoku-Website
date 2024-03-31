@@ -1,0 +1,50 @@
+.navbar {
+    width: 100vw;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: auto 60vw auto;
+    justify-content: center;
+    margin-bottom: 200px;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+#puzzle-select-middle-grid {
+    display: grid;
+    max-width: 1500px;
+    padding-top: 20px;
+    row-gap: 1em;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+#puzzle-form{
+    visibility: hidden
+}
+
+@media only screen and (max-width: 1000px){
+    .grid-container {
+        grid-template-columns: auto 60vw auto;
+    }
+
+    #puzzle-table{
+        display: none;
+        visibility: hidden;
+    }
+
+    #puzzle-form{
+        visibility: visible;
+        display: auto;
+    }
+}
+
+@media only screen and (max-width: 286px){
+    .grid-container{
+        margin-top: 100px;
+    }
+}
